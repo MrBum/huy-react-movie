@@ -1,5 +1,8 @@
 function Content() {
-  return <div className="bg-slate-900">Content</div>
+  return (
+    <div>
+      <h1>Hello Content</h1>
+    </div>
+  );
 }
-
-export default Content
+export default Content;
