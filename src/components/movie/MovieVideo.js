@@ -7,7 +7,7 @@ function MovieVideo() {
 
   useEffect(() => {
     fetch(
-      `http://api.themoviedb.org/3/movie/${id}/videos?api_key=131f3dc4657440aa2ed80c0a22a7d1f9`
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=131f3dc4657440aa2ed80c0a22a7d1f9`
     )
       .then((res) => res.json())
       .then((res) => {
