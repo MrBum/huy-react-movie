@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact index element={<Home />} />
         <Route path="/content" element={<ContentPage />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
         <Route path="/popular" element={<PopularMovie />} />
