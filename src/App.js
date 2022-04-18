@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, Redirect} from "react-router-dom";
 import ContentPage from "./page/Content";
 
 import PopularMovie from "./page/PopularMovie";
@@ -30,6 +30,8 @@ function App() {
         <Route path="/upcoming" element={<UpcomingMovie />} />
         <Route path="/search/:query" element={<Search />} />
         <Route path="*" element={<Home />} />
+        <Route path="/404" component={<Home />} />
+        <Redirect to="/404" />
       </Routes>
     </div>
   );
