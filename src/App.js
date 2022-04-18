@@ -29,6 +29,7 @@ function App() {
         <Route path="/popular" element={<PopularMovie />} />
         <Route path="/upcoming" element={<UpcomingMovie />} />
         <Route path="/search/:query" element={<Search />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
