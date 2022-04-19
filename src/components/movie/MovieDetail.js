@@ -80,7 +80,7 @@ function MovieDetail({data}) {
         <MovieVideo />
       </div>
 
-      <div className="mx-12 mr-12">
+      <div className="md:mx-12 md:mr-12">
         <RecommendMovie className="" />
       </div>
     </div>

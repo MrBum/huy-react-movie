@@ -49,7 +49,7 @@ function UpComingPage() {
           loading === false ? (
             <Card
               key={key}
-              className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-100  duration-300"
+              className="md:ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-100  duration-300"
               sx={{minWidth: 260}}
             >
               <Link to={`/movie/${value.id}`}>
