@@ -23,9 +23,10 @@ function MovieDetail({data}) {
   }, [id]);
 
   return (
-    <div className="bg-gradient-to-t from-white to-gray-800">
+    <div className="bg-gradient-to-t from-white to-gray-800 bg-cover bg-blend-darken bg-center ">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-2 ">
+        <div></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
           <div>
             <img
               className="rounded-[4.5rem] mt-[5rem]"
@@ -72,10 +73,10 @@ function MovieDetail({data}) {
           </div>
         </div>
       </div>
-      <div className="mx-48 mr-48 mt-12">
+      <div className="md:mx-48 md:mr-48  mt-12">
         <Cast />
       </div>
-      <div className="mx-48 mr-48 mt-12">
+      <div className="md:mx-48 md:mr-48 mt-12">
         <MovieVideo />
       </div>
 

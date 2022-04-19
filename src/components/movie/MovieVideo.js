@@ -27,12 +27,12 @@ function MovieVideo() {
         .map(
           (value, key) =>
             key < 1 && (
-              <div className="grid grid-columns-2">
+              <div className="grid grid-columns-2 mt-5">
                 <div className="">
                   <h1 className="text-3xl font-semibold">{value.name}</h1>
                 </div>
                 <iframe
-                  className="rounded-3xl mt-5 ml-4"
+                  className="rounded-3xl mt-5 ml-4 aspect-square"
                   src={`https://www.youtube.com/embed/${value.key}`}
                   width="100%"
                   height="700px"

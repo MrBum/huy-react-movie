@@ -16,7 +16,6 @@ import {
   GET_API_SUCCESS,
   GET_API_ERROR,
 } from "../../store/constant";
-import Skeleton from "@mui/material/Skeleton";
 
 function PopularPage({data}) {
   const [state, dispatch] = useStore();
@@ -24,6 +23,9 @@ function PopularPage({data}) {
 
   const handleChange = (event, value) => {
     setPage(value);
+    setTimeout(() => {
+      window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+    }, 1000);
   };
 
   useEffect(() => {
@@ -50,17 +52,17 @@ function PopularPage({data}) {
   return (
     <div>
       <div>
-        <h1 className="text-4xl font-semibold text-center text-white font-bold">
+        <h1 className="text-4xl font-semibold text-center text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-gray-800">
           Popular Movies
         </h1>
       </div>
 
-      <div className="mt-8 mb-12 grid grid-cols-5 gap-4 overflow-x-scroll overflow-y-hidden">
+      <div className="mt-8 mb-12 grid grid-cols-1 md:grid-cols-5 gap-4 overflow-x-scroll overflow-y-hidden">
         {(state.data.results || []).map((value, key) =>
           state.loading === false ? (
             <Card
               key={key}
-              className="ml-4 static transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 "
+              className="ml-4 static transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100  duration-300 "
               sx={{minWidth: 190}}
             >
               <Link to={`/movie/${value.id}`}>

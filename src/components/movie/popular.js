@@ -14,7 +14,6 @@ import {
   GET_API_SUCCESS,
   GET_API_ERROR,
 } from "../../store/constant";
-import Skeleton from "@mui/material/Skeleton";
 
 function Popular({data}) {
   const [state, dispatch] = useStore();
@@ -42,25 +41,27 @@ function Popular({data}) {
 
   return (
     <div>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-10">
         <div className="col-start-1 ">
-          <h1 className="text-4xl font-semibold ">What's Popular</h1>
+          <h1 className="md:text-4xl text-xl font-semibold  ">
+            What's Popular
+          </h1>
         </div>
         <div className="col-end-9 col-span-2 mr-auto">
           <Link to="/popular">
             <a className="ml-4 transition ease-in-out delay-150 bg-teal-600 hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-300 inline-block text-center  border border-transparent rounded-md py-3 px-8 font-medium text-white ">
-              VIEW MORE
+              MORE
             </a>
           </Link>
         </div>
       </div>
 
-      <div className="mt-8 mb-12 flex overflow-x-scroll overflow-y-hidden scoller_fade">
+      <div className=" mt-8 mb-12 md:flex md:overflow-x-scroll md:overflow-y-hidden overflow-y-scroll md:overflow-x-hidden scoller_fade">
         {(state.data.results || []).map((value, key) =>
           state.loading === false ? (
             <Card
               key={key}
-              className="ml-4 static transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300 "
+              className="ml-4 static transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300 "
               sx={{minWidth: 260}}
             >
               <Link to={`/movie/${value.id}`}>

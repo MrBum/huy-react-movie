@@ -28,7 +28,7 @@ function Cast() {
   return (
     <div>
       <div>
-        <h1 className="text-4xl font-semibold">Series Cast</h1>
+        <h1 className="text-3xl font-semibold">Series Cast</h1>
       </div>
       <div className="mt-8 mb-12 flex overflow-x-scroll overflow-y-hidden ">
         {(CastMovie || []).map(

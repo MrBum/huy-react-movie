@@ -15,7 +15,7 @@ function UpComing() {
 
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=131f3dc4657440aa2ed80c0a22a7d1f9&language=en-US&page=1"
+      "https://api.themoviedb.org/3/trending/all/day?api_key=131f3dc4657440aa2ed80c0a22a7d1f9"
     )
       .then((res) => res.json())
       .then((res) => {
@@ -28,24 +28,23 @@ function UpComing() {
     <div>
       <div className="grid grid-cols-6 gap-4">
         <div className="col-start-1 ">
-          <h1 className="text-4xl font-semibold ">What's UpComing</h1>
+          <h1 className="md:text-4xl text-lg font-semibold  ">Trending</h1>
         </div>
         <div className="col-end-9 col-span-2 mr-auto">
-          <Link to="/popular">
-            <a className="ml-4 transition ease-in-out delay-150 bg-teal-600 hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-300 inline-block text-center  border border-transparent rounded-md py-3 px-8 font-medium text-white ">
-              VIEW MORE
+          <Link to="/upcoming">
+            <a className="ml-4 transition ease-in-out delay-150 bg-teal-600 hover:-translate-y-1 hover:scale-110 hover:bg-teal-600 duration-300 inline-block text-center  border border-transparent rounded-md py-3 px-8 font-medium text-white  ">
+              MORE
             </a>
           </Link>
         </div>
       </div>
-      <div className="mt-8 mb-12 flex overflow-x-scroll overflow-y-hidden ">
+      <div className="mt-8 mb-12  md:flex md:overflow-x-scroll md:overflow-y-hidden overflow-y-scroll overflow-x-hidden">
         {(upcomingState.results || []).map(
           (value, key) =>
             key < 20 && (
               <Card
                 key={key}
-                className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110  duration-300"
-                sx={{minWidth: 260}}
+                className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-105  duration-300  md:min-w-[260px]"
               >
                 <Link to={`/movie/${value.id}`}>
                   <CardActionArea>

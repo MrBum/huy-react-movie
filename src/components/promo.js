@@ -23,7 +23,7 @@ export default function Promo() {
             </p>
           </div>
           <div>
-            <div className="mt-10">
+            <div className="mt-10 hidden md:block">
               {/* Decorative image grid */}
               <div
                 aria-hidden="true"
@@ -32,14 +32,14 @@ export default function Promo() {
                 <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                   <div className="flex items-center space-x-6 lg:space-x-8">
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
+                      <div className="w-20 h-32 md:w-44 md:h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                         <img
                           src={poster1}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <div className="w-20 h-32 md:w-44 md:h-64 rounded-lg overflow-hidden">
                         <img
                           src={poster2}
                           alt=""
@@ -48,21 +48,21 @@ export default function Promo() {
                       </div>
                     </div>
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <div className="w-20 h-32 md:w-44 md:h-64 rounded-lg overflow-hidden">
                         <img
                           src={poster3}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <div className="w-20 h-32 md:w-44 md:h-64 rounded-lg overflow-hidden">
                         <img
                           src={poster4}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <div className="w-20 h-32 md:w-44 md:h-64 rounded-lg overflow-hidden">
                         <img
                           src={poster5}
                           alt=""
@@ -71,14 +71,14 @@ export default function Promo() {
                       </div>
                     </div>
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <div className="w-20 h-32 md:w-44 md:h-64 rounded-lg overflow-hidden">
                         <img
                           src={poster6}
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                      <div className="w-20 h-32 md:w-44 md:h-64 rounded-lg overflow-hidden">
                         <img
                           src={poster7}
                           alt=""

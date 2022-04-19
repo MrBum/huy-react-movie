@@ -2,7 +2,7 @@ import logo from "../media/logo/bmovie.png";
 import {Link} from "react-router-dom";
 function Footer() {
   return (
-    <footer className="p-4 bg-gradient-to-b from-white via-gray-500 to-gray-900 sm:p-6 mt-10">
+    <footer className="p-4 bg-gradient-to-b from-white via-gray-500 to-gray-900 sm:p-6 mt-28">
       <div className="md:flex md:justify-between">
         <div className="mb-6 md:mb-0 self-center">
           <a className="flex items-center">
@@ -22,7 +22,7 @@ function Footer() {
               </li>
               <li>
                 <Link to="/upcoming" className="hover:underline">
-                  Up Coming
+                  Trending
                 </Link>
               </li>
             </ul>

@@ -24,7 +24,7 @@ function UpComingPage() {
   };
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/movie/upcoming?api_key=131f3dc4657440aa2ed80c0a22a7d1f9&language=en-US&page=${page}`
+      `https://api.themoviedb.org/3/trending/all/day?api_key=131f3dc4657440aa2ed80c0a22a7d1f9&page=${page}`
     )
       .then((res) => res.json())
       .then((res) => {
@@ -37,16 +37,19 @@ function UpComingPage() {
   return (
     <div>
       <div>
-        <h1 id="upComing" className="text-4xl text-center text-white font-bold">
-          What's UpComing
+        <h1
+          id="upComing"
+          className="text-4xl text-center text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-gray-800"
+        >
+          Trending
         </h1>
       </div>
-      <div className="mt-8 mb-12 grid grid-cols-5 gap-4   overflow-y-hidden ">
+      <div className="mt-8 mb-12 grid grid-cols-1 md:grid-cols-5 gap-4   overflow-y-hidden ">
         {(upcomingState.results || []).map((value, key) =>
           loading === false ? (
             <Card
               key={key}
-              className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110  duration-300"
+              className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-100  duration-300"
               sx={{minWidth: 260}}
             >
               <Link to={`/movie/${value.id}`}>
