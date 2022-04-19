@@ -44,7 +44,7 @@ function UpComing() {
             key < 20 && (
               <Card
                 key={key}
-                className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-105  duration-300  md:min-w-[260px]"
+                className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-95  duration-300  md:min-w-[260px]"
               >
                 <Link to={`/movie/${value.id}`}>
                   <CardActionArea>

@@ -6,10 +6,12 @@ function Home() {
     <div>
       <Promo />
       <div>
-        <div>
+        <div className="mr-6 ml-4">
           <Popular />
         </div>
-        <UpComing />
+        <div className="mr-6 ml-4">
+          <UpComing />
+        </div>
       </div>
     </div>
   );

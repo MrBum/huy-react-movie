@@ -61,7 +61,7 @@ function Popular({data}) {
           state.loading === false ? (
             <Card
               key={key}
-              className=" ml-4 static transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105  duration-300 "
+              className=" ml-4 static transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-95  duration-300 "
               sx={{minWidth: 260}}
             >
               <Link to={`/movie/${value.id}`}>
