@@ -5,11 +5,10 @@ function Home() {
   return (
     <div>
       <Promo />
-      <div className="mx-32 mr-32 ">
-        <div className="">
+      <div>
+        <div>
           <Popular />
         </div>
-
         <UpComing />
       </div>
     </div>
