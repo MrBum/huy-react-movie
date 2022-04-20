@@ -5,9 +5,11 @@ function Footer() {
     <footer className="p-4 bg-gradient-to-b from-white via-gray-500 to-gray-900 sm:p-6 mt-28">
       <div className="md:flex md:justify-between">
         <div className="mb-6 md:mb-0 self-center">
-          <a className="flex items-center">
-            <img src={logo} className="mr-3 h-12" alt="FlowBite Logo" />
-          </a>
+          <Link to="/home">
+            <a className="flex items-center">
+              <img src={logo} className="mr-3 h-12" alt="FlowBite Logo" />
+            </a>
+          </Link>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
@@ -52,11 +54,7 @@ function Footer() {
       <hr className="my-6 border-gray-500 sm:mx-auto text-gray-900 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-sm text-white sm:text-center ">
-          © 2022{" "}
-          <Link to="/popular" className="hover:underline">
-            Bmovie™
-          </Link>
-          . All Rights Reserved.
+          © 2022 Bmovie™ . All Rights Reserved.
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a

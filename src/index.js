@@ -4,15 +4,18 @@ import {BrowserRouter as Router} from "react-router-dom";
 import App from "./App";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Scroll from "./components/scroll";
 import reportWebVitals from "./reportWebVitals";
 import {StoreProvider} from "./store";
 import "./index.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <Router>
     <StoreProvider>
       <Header />
-      <App />
+      <App className="scroll-smooth md:scroll-smooth" />
+      <Scroll />
       <Footer />
     </StoreProvider>
   </Router>,
