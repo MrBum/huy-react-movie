@@ -6,20 +6,9 @@ import MovieDetail from "./components/movie/MovieDetail";
 import Home from "./page/Home";
 import UpcomingMovie from "./page/UpcomingMovie";
 import Search from "./page/Search";
+import CastDetail from "./components/movie/DetailCast";
 
 function App() {
-  // const [upcomingState, setUpcoming] = useState([]);
-  // useEffect(() => {
-  //   fetch(
-  //     "https://api.themoviedb.org/3/movie/upcoming?api_key=131f3dc4657440aa2ed80c0a22a7d1f9&language=en-US&page=1"
-  //   )
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       setUpcoming(res.results);
-  //     })
-  //     .catch((err) => {});
-  // }, []);
-
   return (
     <div>
       <Routes>
@@ -29,8 +18,8 @@ function App() {
         <Route path="/popular" element={<PopularMovie />} />
         <Route path="/upcoming" element={<UpcomingMovie />} />
         <Route path="/search/:query" element={<Search />} />
+        <Route path="/cast/:id" element={<CastDetail />} />
         <Route path="*" element={<Home />} />
-        <Route path="/404" component={<Home />} />
       </Routes>
     </div>
   );

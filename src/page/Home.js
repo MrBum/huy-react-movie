@@ -5,7 +5,7 @@ import Carousel from "../components/movie/Carousel";
 import ScrollToTop from "../components/scroll";
 function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Promo />
       <div>
         <div>

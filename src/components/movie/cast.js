@@ -34,37 +34,39 @@ function Cast() {
         {(CastMovie || []).map(
           (value, key) =>
             key < 10 && (
-              <Card
-                key={key}
-                className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110  duration-300"
-                sx={{minWidth: 260}}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={
-                      "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" +
-                      value.profile_path
-                    }
-                    alt="green iguana"
-                  />
+              <Link to={`/cast/${value.id}`}>
+                <Card
+                  key={key}
+                  className="ml-4 static transition ease-in-out delay-250 hover:-translate-y-1 hover:scale-110  duration-300"
+                  sx={{minWidth: 260}}
+                >
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={
+                        "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" +
+                        value.profile_path
+                      }
+                      alt="green iguana"
+                    />
 
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {value.name}
-                    </Typography>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {value.name}
+                      </Typography>
 
-                    <Typography
-                      className="font-semibold "
-                      variant="body2"
-                      color="text.secondary"
-                    >
-                      {value.character}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
+                      <Typography
+                        className="font-semibold "
+                        variant="body2"
+                        color="text.secondary"
+                      >
+                        {value.character}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Link>
             )
         )}
       </div>
