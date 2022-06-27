@@ -1,4 +1,3 @@
-import {Link} from "react-router-dom";
 import poster1 from "../media/poster/poster-1.png";
 import poster2 from "../media/poster/poster-2.png";
 import poster3 from "../media/poster/poster-3.png";

@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter as Router} from "react-router-dom";
 import App from "./App";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Scroll from "./components/scroll";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Scroll from "./components/Scroll";
 import reportWebVitals from "./reportWebVitals";
 import {StoreProvider} from "./store";
 import "./index.css";
@@ -19,7 +19,6 @@ ReactDOM.render(
       <Footer />
     </StoreProvider>
   </Router>,
-
   document.getElementById("root")
 );
 

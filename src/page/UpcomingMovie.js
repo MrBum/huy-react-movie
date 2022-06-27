@@ -1,4 +1,4 @@
-import UpcomingPage from "../components/movie/upcomingPage";
+import UpcomingPage from "../components/movie/UpcomingPage";
 function UpcomingMovie() {
   return (
     <div className="bg-gradient-to-t from-white to-gray-800">

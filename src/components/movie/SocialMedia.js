@@ -14,7 +14,6 @@ function SocialMedia() {
       })
       .catch((err) => {});
   }, [id]);
-  console.log(socialState);
 
   return (
     <div class="py-6 md:flex ">

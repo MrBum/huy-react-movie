@@ -1,11 +1,8 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import RecommendMovie from "./recommend";
 import PopularCast from "./PopularCast";
-import MovieVideo from "./MovieVideo";
 import SocialMedia from "./SocialMedia";
-import Trending from "./upcoming";
-import Cast from "./cast";
+import Trending from "./UpcomingMovie";
 
 function CastDetail() {
   const {id} = useParams();

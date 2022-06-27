@@ -2,9 +2,9 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
-import RecommendMovie from "./recommend";
+import RecommendMovie from "./RecommendMovie";
 import MovieVideo from "./MovieVideo";
-import Cast from "./cast";
+import Cast from "./Cast";
 
 function MovieDetail({data}) {
   const {id} = useParams();
@@ -51,7 +51,7 @@ function MovieDetail({data}) {
               </div>
 
               <div className="flex flex-row">
-                {(detail.genres || []).map((value) => (
+                {(detail.genres || []).map((value, key) => (
                   <button
                     className="mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800 "
                     disabled

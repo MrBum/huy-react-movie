@@ -2,7 +2,6 @@
 import {Fragment} from "react";
 import logo from "../media/logo/bmovie.png";
 import {Disclosure} from "@headlessui/react";
-import {MenuIcon, XIcon} from "@heroicons/react/outline";
 import {Link} from "react-router-dom";
 
 const navigation = [
@@ -51,7 +50,7 @@ function Header() {
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4 mt-1">
-                    {navigation.map((item) => (
+                    {navigation.map((item, key) => (
                       <Link
                         key={item.name}
                         to={item.href}

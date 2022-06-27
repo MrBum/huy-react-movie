@@ -1,5 +1,3 @@
-import {useState, useEffect} from "react";
-
 function CarouselMovie() {
   const keyMovie = [
     {key: "47r8FXYZWNU"},
@@ -12,7 +10,7 @@ function CarouselMovie() {
   return (
     <div>
       <div className="md:ml-16 md:mr-24 md:flex md:overflow-x-scroll md:overflow-y-hidden overflow-y-scroll overflow-x-hidden min-w-[1400px]  ">
-        {(keyMovie || []).map((value) => (
+        {(keyMovie || []).map((value, key) => (
           <iframe
             className=" mt-5 ml-4 md:aspect-video aspect-square rounded-3xl"
             src={`https://www.youtube.com/embed/${value.key}`}

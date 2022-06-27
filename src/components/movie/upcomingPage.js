@@ -24,7 +24,7 @@ function UpComingPage() {
   };
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/trending/all/day?api_key=131f3dc4657440aa2ed80c0a22a7d1f9&page=${page}`
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=131f3dc4657440aa2ed80c0a22a7d1f9&language=en-US&page=1=${page}`
     )
       .then((res) => res.json())
       .then((res) => {
@@ -41,7 +41,7 @@ function UpComingPage() {
           id="upComing"
           className="text-4xl text-center text-white font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-gray-800"
         >
-          Trending
+          UpComing
         </h1>
       </div>
       <div className="mt-8 mb-12 grid grid-cols-1 md:grid-cols-5 gap-4   overflow-y-hidden ">
